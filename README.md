@@ -1,7 +1,9 @@
 # Question_1
 
 
-npm install // To install the dependencies
+npm install // To install the dependencies 
+
+Do npm install xml2js as well.
 
 node question1.js -- This will convert the existing XML (File : test.xml) and modified the NODE name to WIPRO.com ) modifiedXMLFile.xml will be created
 
