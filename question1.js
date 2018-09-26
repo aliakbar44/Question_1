@@ -11,8 +11,13 @@ module.exports.newXMLFileName = 'modifiedXMLFile.xml';
 module.exports.result = '';
 
 exports.modifyXMLData = function(callback) {
+console.log('starting');
    fs.readFile(module.exports.fileName, 'utf-8', function (err, data){
-    if(err) module.exports.result = 'false' ; return ;
+    if (err) {
+        throw (err);
+        module.exports.result = 'false';
+        callback(err);
+      }
     // we log out the readFile results    
     console.log(data);
     // we then pass the data to our method here
