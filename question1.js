@@ -12,8 +12,7 @@ module.exports.result = '';
 
 exports.modifyXMLData = function(callback) {
    fs.readFile(module.exports.fileName, 'utf-8', function (err, data){
-    if(err) module.exports.result = 'false'
-           return ; 
+    if(err) module.exports.result = 'false' ; return ;
     // we log out the readFile results    
     console.log(data);
     // we then pass the data to our method here
@@ -45,7 +44,7 @@ exports.modifyXMLData = function(callback) {
     
 }
 
-exports.modifyXMLData(function (result) {
+exports.modifyXMLData(function(result) {
     console.log(result);
 });
 
